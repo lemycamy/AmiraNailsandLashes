@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="evo-calendar.min.css">
+<link rel="stylesheet" href="evo-calendar.orange-coral.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<meta charset="utf-8">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Location</title>
+    
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        
+        }
+        
+        body {
+            margin: 0px;
+            background-color: #FB9AD1;
+            font-family: Roboto Condensed, sans-serif;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding:20px;
+  text-align: left;
+  background-image: url(image.jpg);
+  background-size: cover;
+  background-color: #86469C;
+  margin: 0px;
+  
+}
+        
+.header h1 {
+  font-size: 40px;
+  color: #ff9300;
+    font-family: sans-serif;
+     background: Linear-gradient(to right, pink, red );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 8px;
+    padding-left: 19%;
+   position: flex;
+}
+        
+        .logo {
+        width: 125px;
+        position: flex;
+            flex-shrink: 1;
+            border: 5px;
+            border-color: black;
+        
+        }
+        
+        
+        .leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.column1 {
+  float: left;
+  width: 100%;
+  background-color: none;
+    text-align: center;
+    padding: 10px;
+
+}
+        
+        .leftcolumn h1 {
+            font-family: sans-serif;
+            font-weight: 200;
+                
+        }
+        
+      @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+      
+        
+      .card {
+  background-color: #FFCDEA;
+  padding: 20px;
+  margin-top: 20px;
+}
+        
+        .card1 {
+  background-color: #FFCDEA;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer{
+background:#86469C;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+position: relative;
+  left: 0;
+  bottom: 0;
+    width: 100%;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:black;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:black;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+        
+        #button-container {
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            
+        }
+        
+
+
+  .topnav {
+  overflow: hidden;
+  background-color: #FFCDEA;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  font-family: Roboto Condensed, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  justify-content: space-between;  
+  transition: 1.2 ;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ff9300;
+  color: #ff00a7;
+ 
+}
+        
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+        
+        @media screen and (max-width : 50rem ) {
+            .logo {
+             float: none;
+               
+            }
+            
+        }
+
+
+</style>
+    
+</head>
+    
+<body>
+    
+   <div class="header"> <img src="AMT.png" class="logo" style="border: 5px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
+    
+    <div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="About.html">About us</a>
+  <a href="Services.html">Services</a>
+  <a href="Location.html">Location</a>
+  <a href="Contact.html">Contact</a>    
+  <a href="Booking.html" style="float:right">Booking</a>
+</div>
+    
+    
+    
+    <div class="row">
+        <div class="column1" >
+            <h2><i class="bx bxs-map" style=" font-size: 47px"></i>We are Located at:</h2>
+            <h3>1361 Sevilla Extension, Tondo, Manila, Metro Manila</h3>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.780052391892!2d120.96134117590422!3d14.6116017768056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca753782265b%3A0x24565579326e9c6!2s1361%20Sevilla%20Extension%2C%20Tondo%2C%20Manila%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1710078719615!5m2!1sen!2sph" width="100%" height="325" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+        </div>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href=""><i class="bx bxs-phone" style="font-family: sans-serif">  09152426861</i></a>
+   
+    
+
+</div>
+
+<div class="row">
+<ul>
+<li><a href="Contact.html">Contact us</a></li>
+<li><a href="Services.html">Our Services</a></li>
+<li><a href="About.html">About us</a></li>
+<li><a href="Location.html">Location</a></li>
+<li><a href="Booking.html">Booking</a></li>
+</ul>
+</div>
+
+<div class="row">
+AMIRA'S NAILS AND LASHES Copyright © 2024 AMIRA'S NAILS AND LASHES - All rights reserved
+</div>
+</div>
+</footer>
+   
+
+    
+</body>
+    
+    
+</html>

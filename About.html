@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="evo-calendar.min.css">
+<link rel="stylesheet" href="evo-calendar.orange-coral.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<meta charset="utf-8">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+<title>ABOUT US</title>
+    
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        
+        }
+        
+        body {
+            margin: 0px;
+            background-color: #FB9AD1;
+            font-family: Roboto Condensed, sans-serif;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding:20px;
+  text-align: left;
+  background-image: url(image.jpg);
+  background-size: cover;
+  background-color: #86469C;
+  margin: 0px;
+  
+}
+        
+.header h1 {
+  font-size: 40px;
+  color: #ff9300;
+    font-family: sans-serif;
+     background: Linear-gradient(to right, pink, red );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 8px;
+    padding-left: 19%;
+   position: flex;
+}
+        
+        .logo {
+        width: 125px;
+        position: flex;
+            flex-shrink: 1;
+            border: 5px;
+            border-color: black;
+        
+        }
+        
+        
+        .leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.column1 {
+  float: left;
+  width: 100%;
+  background-color: none;
+    text-align: center;
+    padding: 10px;
+
+}
+        
+        .leftcolumn h1 {
+            font-family: sans-serif;
+            font-weight: 200;
+                
+        }
+        
+      @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+      
+        
+      .card {
+  background-color: #FFCDEA;
+  padding: 20px;
+  margin-top: 20px;
+}
+        
+        .card1 {
+  background-color: #FFCDEA;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer{
+background:#86469C;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+position: relative;
+  left: 0;
+  bottom: 0;
+    width: 100%;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:black;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:black;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+        
+        #button-container {
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            
+        }
+        
+
+
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 1;
+}
+
+@media screen and(max-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+        
+        @media screen and (max-width : 50rem ) {
+            .logo {
+             float: none;
+               
+            }
+            
+        }
+        
+        
+        .topnav {
+  overflow: hidden;
+  background-color: #FFCDEA;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  font-family: Roboto Condensed, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  justify-content: space-between;  
+  transition: 1.2 ;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ff9300;
+  color: #ff00a7;
+ 
+}
+        
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+        
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("2.jpg");
+  min-height: 400px;
+}
+
+.bgimg-2 {
+  background-image: url("5.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("6.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+        
+@media only screen and (max-device-width: 1024px) {
+  .caption span.border {
+      font-size: 15px;
+      letter-spacing: 2px;
+  }
+}        
+
+
+</style>
+    
+</head>
+    
+<body>
+    
+   <div class="header"> <img src="AMT.png" class="logo" style="border: 5px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
+    
+    <div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="About.html">About us</a>
+  <a href="Services.html">Services</a>
+  <a href="Location.html">Location</a>
+  <a href="Contact.html">Contact</a>    
+  <a href="Booking.html" style="float:right">Booking</a>
+</div>
+    
+    <div class="row">
+        <div class="column1" >
+   <div class="card1">
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">About us</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">About Amira's Nails and Lashes</h3>
+  <p>Amira’s nail and lashes recently started this 2024, it was founded by Amira Hassanien Badawy, she started as a call center agent. Later on she entered the cosmetics business, her first experience as an esthetician as a side job and resigned after having a few years of experience to start her own nails and lashes Salon and even today she is still on the business.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: black;">Quality service</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Amira’s Nails and Lashes is a rising nail and lashes servicing firm in the city core. She has a good reputation for providing high-quality cosmetics maintenance and nail & lashes services after a few years of experience. Amira, the dynamic owner behind the store, are well-known for their great knowledge of cosmetics maintenance as well as their commitment to customer satisfaction. Her cutting edge facility is outfitted with cutting-edge equipment to handle a wide range of cosmetics and products. </p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: black;">Quality Products</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Amira’s Nails and Lashes is the trusted choice for women looking for dependable and skilled nails and lashes services, whether it’s a routine maintenance or an annual maintenance. </p>
+  </div>
+</div>
+
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border">Amira's Nails and Lashes</span>
+  </div>
+</div>
+
+
+
+       
+       
+    </div>
+      </div>
+        </div>
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href=""><i class="bx bxs-phone" style="font-family: Roboto Condensed, sans-serif">  09152426861</i></a>
+   
+    
+
+</div>
+
+<div class="row">
+<ul>
+<li><a href="Contact.html">Contact us</a></li>
+<li><a href="Services.html">Our Services</a></li>
+<li><a href="About.html">About us</a></li>
+<li><a href="Location.html">Location</a></li>
+<li><a href="Booking.html">Booking</a></li>
+</ul>
+</div>
+
+<div class="row">
+AMIRA'S NAILS AND LASHES Copyright © 2024 AMIRA'S NAILS AND LASHES - All rights reserved
+</div>
+</div>
+</footer>
+   
+
+    
+</body>
+    
+    
+</html>

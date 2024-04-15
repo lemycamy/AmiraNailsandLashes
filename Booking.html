@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="evo-calendar.min.css">
+<link rel="stylesheet" href="evo-calendar.orange-coral.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+<meta charset="utf-8">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<title>Booking</title>
+    
+    <style>
+        
+        html {
+            scroll-behavior: smooth;
+        
+        }
+        
+        body {
+            margin: 0px;
+            background-color: #FB9AD1;
+            font-family: Roboto Condensed, sans-serif;
+        }
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  padding:20px;
+  text-align: left;
+  background-image: url(image.jpg);
+  background-size: cover;
+  background-color: #86469C;
+  margin: 0px;
+  
+}
+        
+.header h1 {
+  font-size: 40px;
+  color: #ff9300;
+    font-family: sans-serif;
+     background: Linear-gradient(to right, pink, red );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 8px;
+    padding-left: 19%;
+   position: flex;
+}
+        
+        .logo {
+        width: 125px;
+        position: flex;
+            flex-shrink: 1;
+            border: 5px;
+            border-color: black;
+        
+        }
+        
+        
+        .leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.column1 {
+  float: left;
+  width: 100%;
+  background-color: none;
+    text-align: center;
+    padding: 10px;
+
+}
+        
+        .leftcolumn h1 {
+           font-family: Roboto Condensed, sans-serif;
+            font-weight: 200;
+                
+        }
+        
+      @media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+      
+        
+      .card {
+  background-color: #FFCDEA;
+  padding: 20px;
+  margin-top: 20px;
+}
+        
+        .card1 {
+  background-color: #FFCDEA;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer{
+background:#86469C;
+padding:30px 0px;
+font-family: 'Play', sans-serif;
+text-align:center;
+position: relative;
+  left: 0;
+  bottom: 0;
+    width: 100%;
+}
+
+.footer .row{
+width:100%;
+margin:1% 0%;
+padding:0.6% 0%;
+color:black;
+font-size:0.8em;
+}
+
+.footer .row a{
+text-decoration:none;
+color:black;
+transition:0.5s;
+}
+
+.footer .row a:hover{
+color:#fff;
+}
+
+.footer .row ul{
+width:100%;
+}
+
+.footer .row ul li{
+display:inline-block;
+margin:0px 30px;
+}
+
+.footer .row a i{
+font-size:2em;
+margin:0% 1%;
+}
+
+@media (max-width:720px){
+.footer{
+text-align:left;
+padding:5%;
+}
+.footer .row ul li{
+display:block;
+margin:10px 0px;
+text-align:left;
+}
+.footer .row a i{
+margin:0% 3%;
+}
+}
+        
+        #button-container {
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            
+        }
+        
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+    
+ .button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+    
+    
+    
+.container {
+  border-radius: 20px;
+  background-color: #fc93ab;
+  width: 80%;
+  padding-bottom: 5px;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  margin-left: 10%;
+
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+    
+        
+        
+.topnav {
+  overflow: hidden;
+  background-color: #FFCDEA;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  font-family: Roboto Condensed, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  padding: 14px 16px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  justify-content: space-between;  
+  transition: 1.2 ;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ff9300;
+  color: #ff00a7;
+ 
+}
+        
+        @media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+            
+  
+        
+        @media screen and (max-width : 50rem ) {
+            .logo {
+             float: none;
+               
+            }
+            
+        }
+        
+        h1 {
+             font-family: Roboto Condensed, sans-serif;
+             
+        }
+
+        
+        #calendar{
+            width: 80%;
+            position: relative;
+          
+        }
+
+</style>
+    
+</head>
+    
+<body>
+    
+   <div class="header"> <img src="AMT.png" class="logo" style="border: 5px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
+    
+    <div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="About.html">About us</a>
+  <a href="Services.html">Services</a>
+  <a href="Location.html">Location</a>
+  <a href="Contact.html">Contact</a>    
+  <a href="Booking.html" style="float:right">Booking</a>
+</div>
+    
+    <div class="row">
+        <div class="column1" >
+   <h1>Fill up the form and type down your date and type of service </h1> <br>
+
+    <p>Please type down your <br>full Name<br>correct Email<br>Correct phone number<br> and enter the date and type of service
+    <br> So we may contact you for confirmation.
+        <br> Type N/A in email if you dont have one.</p>
+            
+            <p>Example : jan 2, 2024. Nail art. </p>
+
+<div class="container">
+  <form method ="post" action="https://formsubmit.co/lyle.damien17@gmail.com">
+    <div class="row">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+          <input type="text" name="name" required placeholder="Your name..">
+      </div>
+    </div>
+   
+    <div class="row">
+      <div class="col-25">
+        <label for="Email">Email</label>
+      </div>
+      <div class="col-75">
+       <input type="text" name="email" required placeholder="Enter your Email..">
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-25">
+        <label for="number">Contact number</label>
+      </div>
+      <div class="col-75" style="text-align: left">
+        <input type="number" id="Contact" name="Contactnumber" placeholder="Enter Contact Number..">
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Date and Type of service</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+        
+        
+    </div>
+  </form>
+    
+</div>
+    
+      </div>
+        <div class="column1">
+        
+        <div id="calendar"></div>
+        
+        
+        </div>
+        
+        </div>
+    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="evo-calendar.min.js"></script>
+
+        <script>    
+        // initialize your calendar, once the page's DOM is ready
+        $(document).ready(function() {
+            $('#calendar').evoCalendar({
+              theme: "Orange Coral",
+                
+                
+                calendarEvents:[{
+                    
+                  id: 'event1', // Event's id (required, for removing event)
+            name:"AVAILABLE",
+               description: "This date is available for booking", // Description of event (optional)
+               badge: "1-day event", // Event badge (optional)
+               date: "April/20/2024", // Date of event
+               type: "event", // Type of event (event|holiday|birthday)
+               color: "#63d867", // Event custom color (optional)
+               everyYear: false  // Event is every year (optional)
+                    
+                },
+                                
+            { 
+                
+            id: 'event2', // Event's id (required, for removing event)
+            name:"AVAILABLE",
+               description: "This date is available for booking", // Description of event (optional)
+               badge: "1-day event", // Event badge (optional)
+               date: "June/01/2024", // Date of event
+               type: "event", // Type of event (event|holiday|birthday)
+               color: "#63d867", // Event custom color (optional)
+               everyYear: false  // Event is every year (optional)
+            },
+                                
+            { 
+                
+            id: 'event3', // Event's id (required, for removing event)
+            name:"AVAILABLE",
+               description: "This date is available for booking", // Description of event (optional)
+               badge: "1-day event", // Event badge (optional)
+               date: "June/05/2024", // Date of event
+               type: "event", // Type of event (event|holiday|birthday)
+               color: "#63d867", // Event custom color (optional)
+               everyYear: false  // Event is every year (optional)
+            }
+                                
+                                
+                                
+            
+                               
+                               
+                               
+                               ]
+                
+            })
+        })
+        </script>
+    
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href=""><i class="bx bxs-phone" style="font-family: sans-serif">  09152426861</i></a>
+   
+    
+
+</div>
+
+<div class="row">
+<ul>
+<li><a href="Contact.html">Contact us</a></li>
+<li><a href="Services.html">Our Services</a></li>
+<li><a href="About.html">About us</a></li>
+<li><a href="Location.html">Location</a></li>
+<li><a href="Booking.html">Booking</a></li>
+</ul>
+</div>
+
+<div class="row">
+AMIRA'S NAILS AND LASHES Copyright © 2024 AMIRA'S NAILS AND LASHES - All rights reserved
+</div>
+</div>
+</footer>
+   
+
+    
+</body>
+    
+    
+</html>
