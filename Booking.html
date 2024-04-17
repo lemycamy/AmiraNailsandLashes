@@ -37,35 +37,37 @@
 }
 
 .header {
-  padding:20px;
-  text-align: left;
-  background-image: url(image.jpg);
-  background-size: cover;
-  background-color: #86469C;
-  margin: 0px;
-  
+    padding: 20px;
+    text-align: center;
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-color: #86469C;
+    margin: 0px;
+    display: flex;
 }
-        
+
 .header h1 {
-  font-size: 40px;
-  color: #ff9300;
-    font-family: sans-serif;
-     background: Linear-gradient(to right, pink, red );
+    font-size: 50px;
+    color: #ff9300;
+    font-style: 'Lucida Handwriting';
+    font-family: "cursive", 'Lucida Handwriting';
+    background: Linear-gradient(to right, pink, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 8px;
-    padding-left: 19%;
-   position: flex;
+    position: flex;
+    margin-left: 200px;
 }
-        
-        .logo {
-        width: 125px;
-        position: flex;
-            flex-shrink: 1;
-            border: 5px;
-            border-color: black;
-        
-        }
+
+.logo {
+    width: 125px;
+    position: flex;
+    flex-shrink: 1;
+    border: 1px;
+    border-color: black;
+    margin: 0 auto;
+    border-radius: 25px;
+}
         
         
         .leftcolumn {   
@@ -118,62 +120,65 @@
 }
 
 /* Footer */
-.footer{
-background:#86469C;
-padding:30px 0px;
-font-family: 'Play', sans-serif;
-text-align:center;
-position: relative;
-  left: 0;
-  bottom: 0;
+.footer {
+    background: #86469C;
+    padding: 30px 0px;
+    font-family: Roboto Condensed, sans-serif;
+    text-align: center;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: #ff9b9b;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: #ff9b9b;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: #fff;
+}
+
+.footer .row ul {
     width: 100%;
 }
 
-.footer .row{
-width:100%;
-margin:1% 0%;
-padding:0.6% 0%;
-color:black;
-font-size:0.8em;
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
 }
 
-.footer .row a{
-text-decoration:none;
-color:black;
-transition:0.5s;
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
 }
 
-.footer .row a:hover{
-color:#fff;
-}
+@media (max-width: 720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
 
-.footer .row ul{
-width:100%;
-}
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
 
-.footer .row ul li{
-display:inline-block;
-margin:0px 30px;
-}
-
-.footer .row a i{
-font-size:2em;
-margin:0% 1%;
-}
-
-@media (max-width:720px){
-.footer{
-text-align:left;
-padding:5%;
-}
-.footer .row ul li{
-display:block;
-margin:10px 0px;
-text-align:left;
-}
-.footer .row a i{
-margin:0% 3%;
-}
+    .footer .row a i {
+        margin: 0% 3%;
+    }
 }
         
         #button-container {
@@ -326,13 +331,37 @@ input[type=submit]:hover {
           
         }
 
+        @media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header {
+        flex-direction: row; /* Change flex direction to row */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    .header h1 {
+        margin-left: 10px; /* Add some space between logo and title */
+        font-size: 20px; /* Adjust title font size for smaller screens */
+        text-align: left;
+    }
+
+    .logo {
+        width: 100px; /* Adjust logo size for smaller screens */
+    }
+}      
+
 </style>
     
 </head>
     
 <body>
     
-   <div class="header"> <img src="AMT.png" class="logo" style="border: 5px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
+   <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>Amira's Nails and Lashes</h1></div>
     
     <div class="topnav">
   <a href="index.html">Home</a>
@@ -349,7 +378,6 @@ input[type=submit]:hover {
 
     <p>Please type down your <br>full Name<br>correct Email<br>Correct phone number<br> and enter the date and type of service
     <br> So we may contact you for confirmation.
-        <br> Type N/A in email if you dont have one.</p>
             
             <p>Example : jan 2, 2024. Nail art. </p>
 
@@ -386,7 +414,15 @@ input[type=submit]:hover {
         <input type="telephone" id="telephone"  maxlength="11" name="Contactnumber" placeholder="Enter Contact Number.."  pattern="[0-9]{4}[0-9]{3}[0-9]{4}"required >
       </div>
     </div>
-    
+
+      <div class="row">
+  <div class="col-25">
+    <label for="time">Select Time (10am - 7pm)</label>
+  </div>
+  <div class="col-75" style="text-align: left">
+    <input type="time" id="time" name="time" min="10:00" max="19:00" required>
+  </div>
+</div>
 
     <div class="row">
       <div class="col-25">
