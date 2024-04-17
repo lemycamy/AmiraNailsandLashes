@@ -406,11 +406,12 @@ input[type=submit]:hover {
       </div>
       </div>
       
-      <div class="row">
+       <div class="row">
       <div class="col-25">
         <label for="telephone">Contact number</label>
       </div>
       <div class="col-75" style="text-align: left">
+          <p>Format: 0912-123-1234 (without dashes)</p>
         <input type="telephone" id="telephone"  maxlength="11" name="Contactnumber" placeholder="Enter Contact Number.."  pattern="[0-9]{4}[0-9]{3}[0-9]{4}"required >
       </div>
     </div>
@@ -429,7 +430,7 @@ input[type=submit]:hover {
         <label for="subject">Date and Type of service</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Example : jan 2, 2024. Nail art." style="height:200px" required ></textarea>
       </div>
     </div>
     <div class="row">
