@@ -43,7 +43,7 @@
 .header {
     padding: 20px;
     text-align: center;
-    background-image: url(image.jpg);
+    background-image: url(6911600.jpg);
     background-size: cover;
     background-color: #86469C;
     margin: 0px;
@@ -51,11 +51,11 @@
 }
 
 .header h1 {
-    font-size: 50px;
+    font-size: 60px;
     color: #ff9300;
     font-style: 'Lucida Handwriting';
-    font-family: "cursive", 'Lucida Handwriting';
-    background: Linear-gradient(to right, pink, red);
+    font-family:Roboto Condensed, sans-serif;
+    background: #86469C ;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 8px;
@@ -308,13 +308,13 @@
         
         .caption {
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: -35%;
+  top: 10%;
   width: 100%;
   text-align: center;
   color: #000;
   font-family: Roboto Condensed, sans-serif;
-             flex-shrink: 1;
+           
 }
                
 
@@ -330,6 +330,33 @@
     flex-shrink: 1;
   
 }
+        
+        
+ .caption2 {
+  position: absolute;
+  left: -35%;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-family: Roboto Condensed, sans-serif;
+           
+}
+               
+
+.caption2 span.border2 {
+  background-color: #fc9292;
+  opacity: 80%;
+  color: #fff;
+  padding: 18px;
+  font-size: 20px;
+  letter-spacing: 0.7 px;
+  border-radius: 10px;  
+  font-family: Roboto Condensed, sans-serif;
+    flex-shrink: 1;
+  
+}
+
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -459,14 +486,62 @@
       .caption {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 7%;
   width: 100%;
   text-align: center;
   color: #000;
-  font-size: 10px;
-}         
+  font-size: 5px;
+  flex-shrink: 1;
+}        
+            
+            
+.caption span.border {
+  background-color: #fc9292;
+  opacity: 80%;
+  color: #fff;
+  padding: 18px;
+  font-size: 12px;
+  letter-spacing: 0.7 px;
+  border-radius: 10px;  
+  font-family: Roboto Condensed, sans-serif;
+    flex-shrink: 1;
+  
+}            
+            
             
         }
+        
+  @media screen and (max-width : 800px ){
+      .caption2 {
+  position: absolute;
+  left: 28%;
+  top: 7%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 5px;
+  flex-shrink: 1;
+}        
+            
+            
+.caption2 span.border2 {
+  background-color: #fc9292;
+  opacity: 80%;
+  color: #fff;
+  padding: 18px;
+  font-size: 12px;
+  letter-spacing: 0.7 px;
+  border-radius: 10px;  
+  font-family: Roboto Condensed, sans-serif;
+    flex-shrink: 1;
+  
+}            
+            
+            
+        }         
+            
+                  
+        
   @media screen and (max-width: 800px) {
     .leftcolumn,
     .rightcolumn {
@@ -499,7 +574,7 @@
     
 <body>
     
-   <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>Amira's Nails and Lashes</h1></div>
+   <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
     
      <div class="topnav">
  <a href="index.html">Home</a>
@@ -515,7 +590,8 @@
     <div class="leftcolumn">
       
     <div class="card">
-       <h2 style="font-size: 100px; font-family: Roboto Condensed, sans-serif; color: #86469C; text-align: center ">IMAGES</h2>
+       <h2 style="font-size: 80px; font-family: Roboto Condensed, sans-serif; color: #86469C; text-align: center ">Sample</h2>
+         <h2 style="font-size: 80px; font-family: Roboto Condensed, sans-serif; color: #86469C; text-align: center ">Creations</h2>
       <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -527,7 +603,7 @@
 <div class="mySlides fade">
   <div class="numbertext">2 / 10</div>
   <img src="2.jpg" style="width: 100%">
-  <div class="caption"><span class="border">Ombre ₱50-100</span></div>
+  <div class="caption2"><span class="border2">Ombre ₱50-100</span></div>
 </div>
 
 <div class="mySlides fade">
@@ -553,14 +629,14 @@
 <div class="mySlides fade">
   <div class="numbertext">6 / 10</div>
   <img src="11.jpg" style="width: 100%">
-  <div class="caption"><span class="border">Ombre ₱50-100</span></div>
+  <div class="caption2"><span class="border2">Ombre ₱50-100</span></div>
 </div>
           
           
 <div class="mySlides fade">
   <div class="numbertext">7 / 10</div>
   <img src="12.jpg" style="width: 100%">
-  <div class="caption"><span class="border">Cateye ₱50</span></div>
+  <div class="caption2"><span class="border2">Cat eye ₱50</span></div>
 </div>
           
         
@@ -574,14 +650,14 @@
 <div class="mySlides fade">
   <div class="numbertext">9 / 10</div>
   <img src="15.jpg" style="width: 100%">
-  <div class="caption"><span class="border">Whispy ₱50</span></div>
+  <div class="caption2"><span class="border2">Whispy ₱50</span></div>
 </div>
           
           
 <div class="mySlides fade">
   <div class="numbertext">10 / 10</div>
   <img src="14.jpg" style="width: 100%">
-  <div class="caption"><span class="border">Volume ₱100</span></div>
+  <div class="caption2"><span class="border2">Volume ₱100</span></div>
 </div>
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -639,7 +715,7 @@ function showSlides(n) {
 
 
   <div class="rightcolumn">
-    <div class="card">
+    <div class="card" style="text-align: center">
       <h2>Questions</h2>
        <iframe class="responsive-iframe" style="height: 600px" src="https://app.fastbots.ai/embed/clv45r208008tohb91pe5eonc"></iframe>
         
