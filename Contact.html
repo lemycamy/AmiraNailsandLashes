@@ -339,6 +339,13 @@
             background-color: #FFCDEA;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+             box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  transition: all .5s ease; /* back to normal */
+        }
+        
+        .info:hover {
+            transform: translate3D(0,-1px,0) scale(1.20);
         }
 
         .info h2 {
@@ -363,12 +370,69 @@
             }
         }
         
+         #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #fee6e3;
+  color: #86469C;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #ff8dcf;
+}
+        
 
 </style>
     
 </head>
     
 <body>
+    
+    
+    
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    
+    
+    <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+        
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+        
+        function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+</script>
     
    <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
     
@@ -384,17 +448,17 @@
     <div class="container">
         <div class="contact-info">
             <div class="info">
-                <h2>Location</h2>
+                <h2><i class="bx bxs-map" ></i>&nbsp Location</h2>
                 <p>1361 Sevilla Extension,</p>
                 <p>Tondo, Manila,</p>
                 <p>Metro Manila</p>
             </div>
             <div class="info">
-                <h2>Phone</h2>
+                <h2><i class="bx bxs-phone" style="font-family: sans-serif"></i>&nbsp Phone</h2>
                 <p>09152426861</p>
             </div>
             <div class="info">
-                <h2>Facebook</h2>
+                <h2><i class="fa fa-facebook"></i>&nbsp&nbsp Facebook</h2>
                 <p>Amira Hassanien Badawy</p>
             </div>
         </div>
