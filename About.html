@@ -269,7 +269,7 @@
 /* Style the topnav links */
 .topnav a {
   float: left;
-  display: block;
+  display: flex;
   color: black;
   font-family: Roboto Condensed, sans-serif;
   text-align: center;
@@ -288,10 +288,17 @@
  
 }
         
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 800px) {
   .topnav a {
     float: none;
     width: 100%;
+  }
+}
+        
+@media screen and (max-width: 800px) {
+  .topnav a {
+    flex-direction: column;
+    align-items: center;
   }
 }
         
@@ -382,12 +389,71 @@ h3 {
         width: 100px; /* Adjust logo size for smaller screens */
     }
 }      
+         .column1 p {
+            font-size: 20px;
+        }
 
+        
+                #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #fee6e3;
+  color: #86469C;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #ff8dcf;
+}
+        
 </style>
     
 </head>
     
 <body>
+    
+     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    
+    
+    <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+        
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+        
+        function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+</script>
     
    <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
     
@@ -406,43 +472,43 @@ h3 {
 
 <div class="bgimg-1">
   <div class="caption">
-  <span class="border">About us</span>
+  
   </div>
 </div>
 
-<div style="color: #777;background-color: #FFCDEA;text-align:center;padding:50px 80px;text-align: justify;">
+<div style="color: #000000;background-color: #FFCDEA;text-align:center;padding:50px 80px;text-align: justify;">
   <h3 style="text-align:center;">About Amira's Nails and Lashes</h3>
-  <p>Amira’s nail and lashes recently started this 2024, it was founded by Amira Hassanien Badawy, she started as a call center agent. Later on she entered the cosmetics business, her first experience as an esthetician as a side job and resigned after having a few years of experience to start her own nails and lashes Salon and even today she is still on the business.</p>
+  <p>Amira’s nail and lashes recently started this January 2024, it was founded by Amira Hassanien Badawy. She started as a call center agent, and Later on she entered the cosmetics business. Her first experience as an esthetician as a side job and then resigned after having a few years of experience to start her own nails and lashes Salon and even today, she is still in the business. 
+</p>
 </div>
 
 <div class="bgimg-2">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: black;">Quality service</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: black;"></span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#86469C;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Amira’s Nails and Lashes is a rising nail and lashes servicing firm in the city core. She has a good reputation for providing high-quality cosmetics maintenance and nail & lashes services after a few years of experience. Amira, the owner behind the store, is well-known for her great knowledge of cosmetics maintenance as well as her commitment to customer satisfaction. </p>
+  <div style="color:#FFCDEA;background-color:#86469C;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Amira’s Nails and Lashes is a rising nail and lashes service in the city. She has a good reputation for providing high-quality cosmetics maintenance and nail & lashes services after a few years of experience. </p>
   </div>
 </div>
 
 <div class="bgimg-3">
   <div class="caption">
-  <span class="border" style="background-color:transparent;font-size:25px;color: black;">Easy booking</span>
+  <span class="border" style="background-color:transparent;font-size:25px;color: black;"></span>
   </div>
 </div>
 
 <div style="position:relative;">
-  <div style="color:#ddd;background-color:#86469C;text-align:center;padding:50px 80px;text-align: justify;">
-  <p>Amira’s Nails and Lashes is the trusted choice for women looking for dependable and skilled nails and lashes services, whether it’s a routine maintenance or an annual maintenance. </p>
+  <div style="color:#FFCDEA;background-color:#86469C;text-align:center;padding:50px 80px;text-align: justify;">
+  <p>Her facility is outfitted with good equipment to handle a wide range of cosmetics products. Amira’s Nails and Lashes is a trusted choice for women looking for dependable and skilled nails and lashes services, whether it’s for an event, weekly or monthly routine. Home service and Home based studio are available in Amira’s Nails and Lashes. Amira’s Nails and Lashes operates between 10am and 7pm at 1361 Sevilla St.
+ </p>
   </div>
 </div>
 
 <div class="bgimg-1">
-  <div class="caption">
-  <span class="border">Amira's Nails and Lashes</span>
-  </div>
+ <span class="border" style="background-color:transparent;font-size:25px;color: black;"></span>
 </div>
 
 
