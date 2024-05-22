@@ -16,7 +16,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 <title>Home</title>
     
@@ -29,7 +30,10 @@ html {
 body {
     margin: 0px;
     background-color: #FB9AD1;
-    font-family: "cursive", 'Lucida Handwriting';
+    font-family: Roboto condensed, sans-serif;
+    background-image: url(Untitled%20design.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 * {
@@ -77,12 +81,14 @@ body {
 
 /* Right column */
 .column1 {
-    float: left;
+    float: none;
     width: 100%;
     background-color: none;
     text-align: center;
     padding: 10px;
+
 }
+        
 
 .leftcolumn h1 {
     font-family: sans-serif;
@@ -112,6 +118,8 @@ body {
     padding: 20px;
     margin-top: 20px;
 }
+        
+        
 
 /* Clear floats after the columns */
 .row:after {
@@ -182,69 +190,82 @@ body {
     }
 }
 
-#button-container {
-    text-align: center;
-    width: 100%;
-    padding: 10px;
+.button-container {
+   max-width: 100%;
+      display: flex;
+  flex-wrap: wrap;
+      justify-content: space-evenly;
+    margin: 40px;
 }
-
-.button-56 {
+        
+@media screen and (max-width: 700px) {
+  .button-container {
+    flex-direction: column;
     align-items: center;
-    background-color: #fee6e3;
-    border: 2px solid #111;
-    border-radius: 8px;
-    box-sizing: border-box;
-    color: #111;
-    cursor: pointer;
-    display: flex;
-    font-family: Roboto Condensed, sans-serif;
-    font-size: 16px;
-    height: 48px;
-    justify-content: center;
-    line-height: 24px;
-    max-width: 100%;
-    padding: 0 25px;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+  }
 }
 
-.button-56:after {
-    background-color: #111;
-    border-radius: 8px;
-    content: "";
-    display: block;
-    height: 48px;
-    left: 0;
-    width: 100%;
-    position: absolute;
-    top: -2px;
-    transform: translate(8px, 8px);
-    transition: transform .2s ease-out;
-    z-index: -1;
-}
 
-.button-56:hover:after {
-    transform: translate(0, 0);
-}
+          
+          .button-56 {
+            align-items: center;
+            background-color: #fee6e3;
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #111;
+            cursor: pointer;
+            display: flex;
+            font-family: Roboto condensed,sans-serif;
+            font-size: 16px;
+            height: 48px;
+            justify-content: center;
+            line-height: 24px;
+            max-width: 100%;
+            padding: 0 25px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+          }
 
-.button-56:active {
-    background-color: #ffdeda;
-    outline: 0;
-}
+          .button-56:after {
+            background-color: #111;
+            border-radius: 8px;
+            content: "";
+            display: block;
+            height: 48px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            top: -2px;
+            transform: translate(8px, 8px);
+            transition: transform .2s ease-out;
+            z-index: -1;
+          }
 
-.button-56:hover {
-    outline: 1;
-}
+          .button-56:hover:after {
+            transform: translate(0, 0);
+          }
 
-@media screen and (max-width: 768px) {
-    .button-56 {
-        padding: 0 40px;
-    }
-}
+          .button-56:active {
+            background-color: #ffdeda;
+            outline: 0;
+          }
+
+          .button-56:hover {
+            outline: 0;
+          }
+
+          @media (min-width: 768px) {
+            .button-56 {
+              padding: 0 40px;
+            }
+          }
+        
+        
 
 @media screen and (max-width: 800px) {
     .leftcolumn,
@@ -268,7 +289,109 @@ body {
     .logo {
         width: 100px; /* Adjust logo size for smaller screens */
     }
-}      
+    
+    .card2 {
+            width: 20px;
+            padding: 20px;
+            position: relative;
+            
+        }
+    
+}    
+        .card2 {
+            width: 700px;
+            padding: 20px;
+            position: relative;
+            
+        }
+        
+        
+         .hero {
+            background-image: url('Untitled%20design.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .text {
+            padding: 20px;
+            font-size: 50px;
+            color: #fee6e3;
+  text-shadow:
+    3px 3px 0 #000,
+    -3px 3px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .text {
+            padding: 20px;
+            font-size: 20px;
+                 text-shadow:
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+            }
+            
+        }
+        
+        .slider {
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+    border-radius: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-height: 700px;
+    max-width: 200px;
+}
+
+.slider img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+        
 
 </style>
     
@@ -278,17 +401,66 @@ body {
     
    <div class="header"> <img src="AMT.png" class="logo" style="border: 1px solid #000000; padding: 0px; margin: 0px; "> <h1>AMIRA'S NAILS AND LASHES</h1></div>
     
+        <div class="hero">
+        <div class="text">
+            <h1>Welcome to <br> Amira's Nails and Lashes</h1>
+            <p>Paragraph 1 Row 1</p>
+        </div>
+        <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="1.jpg" alt="Slide 1"></div>
+          <div class="slide"><img src="2.jpg" alt="Slide 2"></div>
+          <div class="slide"><img src="5.jpg" alt="Slide 3"></div>
+        </div>
+        <div class="slider-buttons">
+          <button class="slider-button" id="prevBtn">&#10094;</button>
+          <button class="slider-button" id="nextBtn">&#10095;</button>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+    // Slider functionality
+const slides = document.querySelector('.slides');
+const slide = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+let index = 0;
+
+function showSlide(n) {
+  index += n;
+  if (index >= slide.length) {
+    index = 0;
+  }
+  if (index < 0) {
+    index = slide.length - 1;
+  }
+  slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+}
+
+prevBtn.addEventListener('click', () => showSlide(-1));
+nextBtn.addEventListener('click', () => showSlide(1));
+    </script>
+
+    
     <div class="row">
-        <div class="column1" >
-   <div class="buton-container" align="center">
-      
+        <div class="buttonsrowed" >
+                     <div>
+                  
+             <div class="button-container" align="center">
              <button class="button-56" onclick="window.location.href='About.html'" role="button" >ABOUT US</button><br>
              <button class="button-56" onclick="window.location.href='Booking.html'" role="button">BOOKING</button><br>
              <button class="button-56" onclick="window.location.href='Location.html'" role="button">LOCATION</button><br>
              <button class="button-56" onclick="window.location.href='Contact.html'" role="button">CONTACT US</button><br>
              <button class="button-56" onclick="window.location.href='Services.html'" role="button">SERVICES</button><br>
+             </div>     
+                     
+              
+          
             
-    </div>
+            
+            
       </div>
         </div>
 <footer>
@@ -302,6 +474,7 @@ body {
 </div>
 
 <div class="row">
+<div class="column">
 <ul>
 <li><a href="Contact.html">Contact us</a></li>
 <li><a href="Services.html">Our Services</a></li>
@@ -309,6 +482,7 @@ body {
 <li><a href="Location.html">Location</a></li>
 <li><a href="Booking.html">Booking</a></li>
 </ul>
+</div>
 </div>
 
 <div class="row">
