@@ -402,9 +402,12 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+             box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  transition: all .5s ease; /* back to normal */
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {opacity: 0.7;
+        transform: translate3D(0,-1px,0) scale(1.20);}
 
 /* The Modal (background) */
 .modal {
@@ -419,14 +422,18 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    
 }
 
+       
+        
 /* Modal Content (image) */
 .modal-content {
   margin: auto;
   display: block;
   width: 80%;
   max-width: 700px;
+  
 }
 
 /* Caption of Modal Image */
@@ -577,10 +584,20 @@
   position: relative;
   margin: 20px auto;
 }
+        
+        .slides text {
+            font-size: 15px;
+            font-weight: 800;
+            color: #FFCDEA;
+        }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
+    font-size: 20px;
+            font-weight: 800;
+            color: #FFCDEA;
+    
 }
 
 .slide {
@@ -771,9 +788,9 @@ nextBtn.addEventListener('click', () => showSlide(1));
   <div class="rightcolumn">
     <div class="card" style="text-align: center">
       <h2>Questions</h2>
-       <iframe class="responsive-iframe" style="height: 600px; border: 3px;" src="https://app.fastbots.ai/embed/clv45r208008tohb91pe5eonc"></iframe>
+       <iframe class="responsive-iframe" style="height: 600px; border: 3px;" src="https://app.fastbots.ai/embed/clv449ck8008johb902otxglf"></iframe>
         
-                <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clv45r208008tohb91pe5eonc"></script>
+                <script defer src="https://app.fastbots.ai/embed.js" data-bot-id="clv449ck8008johb902otxglf"></script>
     </div>
       <div class="card">
       
