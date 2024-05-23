@@ -362,55 +362,87 @@ input[type=submit]:hover {
     }
 }      
 
-       .calendar {
-    width: 300px;
-    margin: 20px auto;
-    border: 3px solid #86469C;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #FFCDEA;
-  }
-  .month-header {
-    background-color: #FFCDEA;
-    text-align: center;
-    padding: 10px 0;
-  }
-  .month-header h2 {
-    margin: 0;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    height: 300px;
-  }
-  th, td {
-    text-align: center;
-    padding: 5px;
-  }
-  th {
-    background-color: #86469C;
-  }
-  td {
-    cursor: pointer;
-    line-height: 30px;
-    box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
-  transition: all .5s ease; /* back to normal */
-  }
-        
-  td:hover {
-            transform: translate3D(0,-1px,0) scale(1.20);
-        }
-        
-  .available {
-    background-color: #4bff4b; /* Light green for available dates */
-  }
-  .fully-booked {
-    background-color: #ffff00; /* Light yellow for fully booked dates */
-  }
-  .unavailable {
-    background-color: #fd6262; /* Light red for unavailable dates */
-  }
-        
+.calendar {
+  width: 300px;
+  margin: 20px auto;
+  border: 3px solid #86469C;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #FFCDEA;
+}
+.month-header {
+  background-color: #FFCDEA;
+  text-align: center;
+  padding: 10px 0;
+}
+.month-header h2 {
+  margin: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  height: 300px;
+}
+th, td {
+  text-align: center;
+  padding: 5px;
+  position: relative; /* Needed for tooltip positioning */
+}
+th {
+  background-color: #86469C;
+}
+td {
+  cursor: pointer;
+  line-height: 30px;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  transition: all .5s ease;
+}
+td:hover {
+  transform: translate3D(0, -1px, 0) scale(1.20);
+}
+.available {
+  background-color: #4bff4b; /* Light green for available dates */
+}
+.fully-booked {
+  background-color: #ffff00; /* Light yellow for fully booked dates */
+}
+.unavailable {
+  background-color: #fd6262; /* Light red for unavailable dates */
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -30px; /* Position the tooltip text above the td */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Arrow at the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
                         #myBtn {
   display: none;
   position: fixed;
@@ -613,7 +645,8 @@ function renderCalendar(month, year) {
         var isAvailable = availableDates.includes(dateStr);
         var isFullyBooked = fullyBookedDates.includes(dateStr);
         var classToAdd = isAvailable ? 'available' : (isFullyBooked ? 'fully-booked' : 'unavailable');
-        calendarHTML += '<td class="' + classToAdd + '">' + date + '</td>';
+        var tooltipText = isAvailable ? 'Available' : (isFullyBooked ? 'Fully booked' : 'Unavailable');
+        calendarHTML += '<td class="' + classToAdd + '"><div class="tooltip">' + date + '<span class="tooltiptext">' + tooltipText + '</span></div></td>';
         date++;
       }
     }
