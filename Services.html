@@ -75,9 +75,21 @@
 }
         
         
-        .leftcolumn {   
-  float: left;
-  width: 75%;
+        .leftcolumn {
+    float: left;
+    width: 65%; /* Decrease width */
+}
+
+.rightcolumn {
+    float: right;
+    width: 35%; /* Decrease width */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%; /* Full width for both columns */
+    }
 }
 
 /* Right column */
