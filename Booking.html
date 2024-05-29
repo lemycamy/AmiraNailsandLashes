@@ -60,7 +60,7 @@
 
 
 .logo {
-    width: 125px;
+    width: 150px;
     position: flex;
     flex-shrink: 1;
     border: 1px;
@@ -132,7 +132,7 @@
     font-weight: bold;
 }
 
-.footer .row {
+.footer .row1 {
     width: 100%;
     margin: 1% 0%;
     padding: 0.6% 0%;
@@ -140,26 +140,26 @@
     font-size: 0.8em;
 }
 
-.footer .row a {
+.footer .row1 a {
     text-decoration: none;
     color: #ff9b9b;
     transition: 0.5s;
 }
 
-.footer .row a:hover {
+.footer .row1 a:hover {
     color: #fff;
 }
 
-.footer .row ul {
+.footer .row1 ul {
     width: 100%;
 }
 
-.footer .row ul li {
+.footer .row1 ul li {
     display: inline-block;
     margin: 0px 30px;
 }
 
-.footer .row a i {
+.footer .row1 a i {
     font-size: 2em;
     margin: 0% 1%;
 }
@@ -170,13 +170,13 @@
         padding: 5%;
     }
 
-    .footer .row ul li {
+    .footer .row1 ul li {
         display: block;
         margin: 10px 0px;
         text-align: left;
     }
 
-    .footer .row a i {
+    .footer .row1 a i {
         margin: 0% 3%;
     }
 }
@@ -234,29 +234,72 @@ input[type=submit]:hover {
     
     
     
-.container {
-  border-radius: 20px;
-  background-color: #FFCDEA;
-  width: 80%;
-  padding-bottom: 5px;
-  margin: 20px;
-  padding: 20px;
-  position: relative;
-  margin-left: 10%;
-
-}
-
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
+ body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #FB9AD1;
+    margin: 0;
+  }
+  .container {
+    border-radius: 20px;
+    background-color: #FFCDEA;
+    width: 80%;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+        
+  
+  .form-container, .calendar-container {
+    flex: 1;
+    padding: 10px;
+  }
+  .form-container {
+    min-width: 300px;
+  }
+  .row {
+    display: flex;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+  }
+  .col-25, .col-75 {
+    padding: 10px;
+  }
+  .col-25 {
+    flex: 25%;
+  }
+  .col-75 {
+    flex: 75%;
+  }
+  input[type=text], input[type=email], input[type=tel], input[type=time], input[type=date], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  select option[disabled] {
+    color: #999;
+  }
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
 
 /* Clear floats after the columns */
 .row:after {
@@ -462,7 +505,14 @@ td:hover {
 #myBtn:hover {
   background-color: #ff8dcf;
 }
-        
+    
+        select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
         
 </style>
     
@@ -518,95 +568,103 @@ function topFunction() {
     
     <div class="row">
         <div class="column1" >
-   <h1>Fill up the form and type down your date and type of service </h1> <br>
+  
 
       
 
 
 <div class="container">
-  <form method ="post" action="https://formsubmit.co/b9dc00c36aa9b1d0c9f2394aa5e58582">
-
-  <input type="hidden" name="_next" value="https://lemycamy.github.io/AmiraNailsandLashes/Booking.html">
-      
+  <div class="form-container">
+    <form method="post" action="https://formsubmit.co/b9dc00c36aa9b1d0c9f2394aa5e58582">
+      <input type="hidden" name="_next" value="https://lemycamy.github.io/AmiraNailsandLashes/Booking.html">
       <input type="hidden" name="_autoresponse" value="Your booking is being confirmed, hang tight while we process it">
       
-    <div class="row">
-      <div class="col-25">
-        <label for="name">Name</label>
-      </div>
-      <div class="col-75">
-          <input type="text" name="name" required placeholder="Your name..">
-      </div>
-    </div>
-   
-    <div class="row">
-      <div class="col-25">
-        <label for="Email">Email</label>
-      </div>
-      <div class="col-75" style="text-align: left">
-       <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@(gmail|yahoo)\.com" required placeholder="Enter your Email.." required >
-      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" required placeholder="Your name..">
+        </div>
       </div>
       
-       <div class="row">
-      <div class="col-25">
-        <label for="telephone">Contact number</label>
-      </div>
-      <div class="col-75" style="text-align: left">
-          <p>Format: 09121231234</p>
-        <input type="telephone" id="telephone"  maxlength="11" name="Contactnumber" placeholder="Enter Contact Number.."  pattern="[0-9]{4}[0-9]{3}[0-9]{4}"required >
-      </div>
-    </div>
-
       <div class="row">
-  <div class="col-25">
-    <label for="time">Select Time (10am - 7pm)</label>
-  </div>
-  <div class="col-75" style="text-align: left">
-    <input type="time" id="time" name="time" min="10:00" max="19:00" required>
-  </div>
-</div>
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" required placeholder="Enter your email..">
+        </div>
+      </div>
       
       <div class="row">
-  <div class="col-25">
-    <label for="time">Select Date (choose from the calendar) </label>
+        <div class="col-25">
+          <label for="telephone">Contact number</label>
+        </div>
+        <div class="col-75">
+          <input type="tel" id="telephone" name="telephone" required placeholder="Enter contact number..">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="time">Select Time (10am - 7pm)</label>
+        </div>
+        <div class="col-75">
+          <input type="time" id="time" name="time" min="10:00" max="19:00" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="date">Select Date</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="date" name="date" required>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Select Service</label>
+        </div>
+        <div class="col-75">
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select services</option>
+            <optgroup label="Eyebrows">
+              <option value="Eyebrow Henna">Eyebrow Henna</option>
+            </optgroup>
+            <optgroup label="Eyelash">
+              <option value="Eyelash Extension Classic">Eyelash Extension Classic</option>
+              <option value="Cat Eye">Cat Eye</option>
+              <option value="Whispy">Whispy</option>
+              <option value="Hybrid Whispy">Hybrid Whispy</option>
+              <option value="Whispy Volume">Whispy Volume</option>
+              <option value="Cat Eye Volume">Cat Eye Volume</option>
+              <option value="Volume">Volume</option>
+              <option value="Mega Volume">Mega Volume</option>
+              <option value="Eyelash Extension Removal">Eyelash Extension Removal</option>
+            </optgroup>
+            <optgroup label="Nails">
+              <option value="Manicure/Pedicure">Manicure/Pedicure</option>
+              <option value="Gel Polish Mani/Pedi">Gel Polish Mani/Pedi</option>
+              <option value="Gel Polish Removal">Gel Polish Removal</option>
+              <option value="Softgel Extension Basic/Plain">Softgel Extension Basic/Plain</option>
+              <option value="Stones">Stones</option>
+              <option value="Nail Art">Nail Art</option>
+              <option value="French Tip">French Tip</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
   </div>
-          <script>
-// Get current date in the format yyyy-mm-dd
-var today = new Date().toISOString().split('T')[0];
-
-// Set the min attribute of the date input field to today
-document.getElementById("selectedDate").setAttribute("min", today);
-</script>
-  <div class="col-75" style="text-align: left">
-    <input type="date" id="selectedDate" name="selectedDate" required>
-
-  </div>
-</div>
-
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Date and Type of service</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Example : jan 2, 2024. Nail art." style="height:200px" required ></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-        
-        
-    </div>
-
-  </form>
-    
-</div>
-    
-      </div>
-        <div class="column1">
-        
-
-<div class="calendar" id="calendar"></div>
+  <div class="calendar-container">
+ <div class="calendar" id="calendar"></div>
 <button onclick="showNextMonth()">Next Month</button>
 <button onclick="showPreviousMonth()">Previous Month</button>
 
@@ -679,12 +737,16 @@ function showPreviousMonth() {
 
 renderCalendar(currentMonth, currentYear);
 </script>
+  </div>
+</div>
+
+
             
         </div>
     </div>
 <footer>
 <div class="footer">
-<div class="row">
+<div class="row1">
 <a href="https://www.facebook.com/iloveluhan10/posts/pfbid0HDYvnecsP6DrbgBEL2odMVxhAN234GN2oX2YWoz2vVxPT9LavZ8N9PBrhED8eyJ2l"><i class="fa fa-facebook"></i></a>
 <a href=""><i class="bx bxs-phone" style="font-family: sans-serif">  09152426861</i></a>
    
@@ -692,7 +754,7 @@ renderCalendar(currentMonth, currentYear);
 
 </div>
 
-<div class="row">
+<div class="row1">
 <ul>
 <li><a href="Contact.html">Contact us</a></li>
 <li><a href="Services.html">Our Services</a></li>
@@ -702,7 +764,7 @@ renderCalendar(currentMonth, currentYear);
 </ul>
 </div>
 
-<div class="row">
+<div class="row1">
 AMIRA'S NAILS AND LASHES Copyright © 2024 AMIRA'S NAILS AND LASHES - All rights reserved
 </div>
 </div>
