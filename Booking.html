@@ -471,9 +471,10 @@ td:hover {
   background-color: #fd6262; /* Light red for unavailable dates */
 }
 .tooltip {
-  position: relative;
+  position: absolute; /* Change position to absolute */
   display: inline-block;
 }
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -483,8 +484,8 @@ td:hover {
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  z-index: 99; /* Adjust z-index to bring tooltip text on top */
-  top: -30px; /* Position the tooltip text above the td */
+  z-index: 9999; /* Set a high z-index value */
+  top: -40px; /* Adjust the top position as needed */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -500,6 +501,7 @@ td:hover {
   border-style: solid;
   border-color: #000 transparent transparent transparent;
 }
+
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
