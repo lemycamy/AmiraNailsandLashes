@@ -622,7 +622,7 @@ function topFunction() {
           <label for="telephone">Contact number</label>
         </div>
         <div class="col-75">
-          <input type="tel" id="telephone" name="telephone" required placeholder="Enter contact number..">
+          <input type="tel" id="telephone" name="telephone" maxlength="11" placeholder="Enter Contact Number.."  pattern="[0-9]{4}[0-9]{3}[0-9]{4}"required required placeholder="Enter contact number..">
         </div>
       </div>
       
@@ -634,7 +634,7 @@ function topFunction() {
           <input type="time" id="time" name="time" min="10:00" max="19:00" required>
         </div>
       </div>
-      
+    
       <div class="row">
         <div class="col-25">
           <label for="date">Select Date</label>
