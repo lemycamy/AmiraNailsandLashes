@@ -50,18 +50,24 @@
     margin: 0px;
     display: flex;
 }
-
+        
 .header h1 {
-    font-size: 60px;
+    font-size: 45px; /* Increase font size */
     color: #ff9300;
     font-style: 'Lucida Handwriting';
-    font-family:Roboto Condensed, sans-serif;
-    background: #86469C ;
+    font-family: Roboto Condensed, sans-serif;
+    background: #86469C;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 8px;
     position: flex;
-    margin-left: 200px;
+    margin-left: 20px; /* Add margin to the left for spacing */
+}
+
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 35px; /* Adjust font size for smaller screens */
+    }
 }
 
 .logo {
