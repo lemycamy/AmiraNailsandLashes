@@ -63,13 +63,24 @@
 
 
 .logo {
-    width: 150px;
-    position: flex;
-    flex-shrink: 1;
-    border: 1px;
-    border-color: black;
-    margin: 0 auto;
+    width: auto; /* Allow the width to adjust automatically */
+    height: 150px; /* Set a fixed height */
+    object-fit: contain; /* Maintain aspect ratio */
+    border: 1px solid #000000;
     border-radius: 25px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        height: 100px; /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        height: 80px; /* Further adjust height for even smaller screens */
+    }
 }
         
         
